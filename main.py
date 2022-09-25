@@ -8,6 +8,7 @@ import re
 import asyncio
 import time
 from datetime import datetime
+from database.users_chats_db import db
 
 API_ID = os.environ.get("API_ID", None) 
 API_HASH = os.environ.get("API_HASH", None) 
@@ -18,6 +19,7 @@ UPDATE_CHNL = os.environ.get("UPDATE_CHNL")
 OWNER_USERNAME = os.environ.get("OWNER_USERNAME")
 SUPPORT_GRP = os.environ.get("SUPPORT_GRP")
 BOT_NAME = os.environ.get("BOT_NAME")
+ADMINS = os.environ.get("ADMINS")
 START_IMG1 = os.environ.get("START_IMG1")
 START_IMG2 = os.environ.get("START_IMG2", None)
 START_IMG3 = os.environ.get("START_IMG3", None)
