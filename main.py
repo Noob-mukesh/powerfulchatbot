@@ -8,12 +8,13 @@ import re
 import asyncio
 import time
 from datetime import datetime
-from database.users_chats_db import db
+#from database.users_chats_db import db
 
 API_ID = os.environ.get("API_ID", None) 
 API_HASH = os.environ.get("API_HASH", None) 
 BOT_TOKEN = os.environ.get("BOT_TOKEN", None) 
 MONGO_URL = os.environ.get("MONGO_URL", None)
+DATABASE_NAME = os.environ.get("DATABASE_NAME") 
 BOT_USERNAME = os.environ.get("BOT_USERNAME") 
 UPDATE_CHNL = os.environ.get("UPDATE_CHNL")
 OWNER_USERNAME = os.environ.get("OWNER_USERNAME")
