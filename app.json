@@ -29,6 +29,10 @@
             "required": true
             "value": "mr_sukkun"
         },
+        "ADMINS": {
+        "description": "enter admin id"
+        "value": "5207640479"
+        },
         "SUPPORT_GRP": {
             "description": "Your Support Group without @",
             "required": true
