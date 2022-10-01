@@ -98,57 +98,29 @@ STICKER = [
       STKR9,
 ]
 START = f"""
-**๏ ʜᴇʏ, ɪ ᴀᴍ [{BOT_NAME}]({START_IMG1})**
-**➻ ᴀɴ ᴀɪ-ʙᴀsᴇᴅ ᴄʜᴀᴛʙᴏᴛ.**
-**──────────────────**
-**➻ ᴜsᴀɢᴇ /chatbot [on/off]**
-**๏ ᴛᴏ ɢᴇᴛ ʜᴇʟᴘ ᴜsᴇ /help**
-"""
-DEV_OP = [
-    [
-        InlineKeyboardButton(text="🥀 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🥀", url=f"https://t.me/{OWNER_USERNAME}"),
-        InlineKeyboardButton(text="✨ ꜱᴜᴘᴘᴏʀᴛ ✨", url=f"https://t.me/{SUPPORT_GRP}"),
-    ],
-    [
-        InlineKeyboardButton(
-            text="🧸 ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ 🧸",
-            url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-        ),
-    ],
-    [
-        InlineKeyboardButton(text="🚀 ʜᴇʟᴘ & ᴄᴍᴅs 🚀", callback_data="HELP"),
-    ],
-    [
-        InlineKeyboardButton(text="❄️ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ❄️", url=f"https://github.com/noob-mukesh/powerfulchatbot"),
-        InlineKeyboardButton(text="☁️ ᴜᴘᴅᴀᴛᴇs ☁️", url=f"https://t.me/{UPDATE_CHNL}"),
-    ],
-]
-PNG_BTN = [
-    [
-         InlineKeyboardButton(
-             text="🧸 ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ 🧸",
-             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-         ),
-     ],
-     [
-         InlineKeyboardButton(text="✨ sᴜᴘᴘᴏʀᴛ ✨", 
-                              url=f"https://t.me/{SUPPORT_GRP}",
-         ),
-     ],
-]
-HELP_READ = "**ᴜsᴀɢᴇ ☟︎︎︎**\n**➻ ᴜsᴇ** `/chatbot on` **ᴛᴏ ᴇɴᴀʙʟᴇ ᴄʜᴀᴛʙᴏᴛ.**\n**➻ ᴜsᴇ** `/chatbot off` **ᴛᴏ ᴅɪsᴀʙʟᴇ ᴛʜᴇ ᴄʜᴀᴛʙᴏᴛ.**\n**๏ ɴᴏᴛᴇ ➻ ʙᴏᴛʜ ᴛʜᴇ ᴀʙᴏᴠᴇ ᴄᴏᴍᴍᴀɴᴅs ғᴏʀ ᴄʜᴀᴛ-ʙᴏᴛ ᴏɴ/ᴏғғ ᴡᴏʀᴋ ɪɴ ɢʀᴏᴜᴘ ᴏɴʟʏ!!**\n\n**➻ ᴜsᴇ** `/ping` **ᴛᴏ ᴄʜᴇᴄᴋ ᴛʜᴇ ᴘɪɴɢ ᴏғ ᴛʜᴇ ʙᴏᴛ.**\n**©️ @mr_sukkun**"
-HELP_BACK = [
-     [
-           InlineKeyboardButton(text="✨ ʙᴀᴄᴋ ✨", callback_data="HELP_BACK"),
-     ],
-]
+**๏ HII🐒 ๏**
+
 @bot.on_message(filters.command(["start", "aistart", f"start@{BOT_USERNAME}"]))
 async def restart(client, m: Message):
     accha = await m.reply_text(
                 text = random.choice(EMOJIOS),
     )
     await asyncio.sleep(1)
-    await accha.edit("__ᴅιиg ᴅσиg ꨄ︎ ѕтαятιиg..__")
+    await accha.edit("🐒")
+    await asyncio.sleep(0.2)
+    await accha.edit("✨")
+    await asyncio.sleep(0.2)
+    await accha.edit("💞")
+    await asyncio.sleep(0.2)
+    await accha.edit("💥")
+    await asyncio.sleep(0.2)
+    await accha.edit("⚡")
+    await asyncio.sleep(0.2)
+    await accha.edit("💫")
+    await asyncio.sleep(0.2)
+    await accha.edit("🌀")
+    await asyncio.sleep(0.2)
+    await accha.edit("💋")
     await asyncio.sleep(0.2)
     await accha.edit("__ᴅιиg ᴅσиg ꨄ︎ sтαятιиg..__")
     await asyncio.sleep(0.2)
@@ -158,46 +130,7 @@ async def restart(client, m: Message):
     )
     await asyncio.sleep(2)
     await umm.delete()
-    await m.reply_photo(
-        photo = START_IMG1,
-        caption=f"""**๏ ʜᴇʏ, ɪ ᴀᴍ [{BOT_NAME}](t.me/{BOT_USERNAME})**\n**➻ ᴀɴ ᴀɪ-ʙᴀsᴇᴅ ᴄʜᴀᴛʙᴏᴛ.**\n**──────────────────**\n**➻ ᴜsᴀɢᴇ /chatbot [on/off]**\n**๏ ᴛᴏ ɢᴇᴛ ʜᴇʟᴘ ᴜsᴇ /help**""",
-        reply_markup=InlineKeyboardMarkup(DEV_OP),
-    )
-@bot.on_callback_query()
-async def cb_handler(Client, query: CallbackQuery):
-    if query.data == "HELP":
-     await query.message.edit_text(
-                      text = HELP_READ,
-                      reply_markup = InlineKeyboardMarkup(HELP_BACK),
-     )
-    elif query.data == "HELP_BACK":
-            await query.message.edit(
-                  text = START,
-                  reply_markup=InlineKeyboardMarkup(DEV_OP),
-        )
-@bot.on_message(filters.command(["help", f"help@{BOT_USERNAME}"], prefixes=["+", ".", "/", "-", "?", "$"]))
-async def restart(client, message):
-    hmm = await message.reply_text(
-                        text = HELP_READ,
-                        reply_markup= InlineKeyboardMarkup(HELP_BACK),
-       )
-
-@bot.on_message(filters.command(["ping","alive"], prefixes=["+", "/", "-", "?", "$", "&"]))
-async def ping(client, message: Message):
-        start = datetime.now()
-        t = "__ριиgιиg...__"
-        txxt = await message.reply(t)
-        await asyncio.sleep(0.25)
-        await txxt.edit_text("__ριиgιиg.....__")
-        await asyncio.sleep(0.35)
-        await txxt.delete()
-        end = datetime.now()
-        ms = (end-start).microseconds / 1000
-        await message.reply_photo(
-                             photo=START_IMG1,
-                             caption=f"нey вαву!!\n**[{BOT_NAME}](t.me/{BOT_USERNAME})** ιѕ alιve 🥀 αnd worĸιng ғιne wιтн a pιng oғ\n➥ `{ms}` ms\n\n**мαdє ωιтн ❣️ ву [ᴍᴜᴋᴇsʜ](https://t.me/itz_mst_boi)**",
-                             reply_markup=InlineKeyboardMarkup(PNG_BTN),
-       )
+    
 
 @bot.on_message(
     filters.command(["chatbot off", f"chatbot@{BOT_USERNAME} off"], prefixes=["/", ".", "?", "-"])
